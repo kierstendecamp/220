@@ -1,5 +1,5 @@
 """
-Name: <your name goes here – first and last>
+Name: Kiersten DeCamp
 <ProgramName>.py
 
 Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
@@ -12,7 +12,15 @@ I certify that this assignment is my own work, but I discussed it with: <Name(s)
 
 
 def average():
-    pass
+    num_grades = eval(input("what is the number of grades submitted?: "))
+    my_sum = 0
+    for grades in range(num_grades):
+        grade = input(eval("what is the grade", grades + 1)
+        total_grades = my_sum + num_grades
+        average_score = total_grades/ num_grades
+    print()
+
+
 
 
 def tip_jar():
