@@ -1,4 +1,3 @@
-
 '''
 Kiersten DeCamp
 Lab 1
@@ -29,19 +28,6 @@ def means():
     print("what is the geometric mean?: ", geo_mean)
 
 means()
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
