@@ -32,11 +32,15 @@ def newton():
 
 
 def sequence():
-    pass
+        # for i in range(0,2):
+            # print(i% + 1, "end ")
+    # mod - allows for repeat
+    #
 
 
 def pi():
-    pass
+   # for i in range 100
+
 
 
 if __name__ == '__main__':
