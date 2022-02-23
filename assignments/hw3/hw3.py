@@ -13,15 +13,14 @@ I certify that this assignment is my own work, but I discussed it with: <Name(s)
 
 def average():
     num_grades = eval(input("what is the number of grades submitted?: "))
-    my_sum = 0
-    for grades in range(num_grades):
-        grade = input(eval("what is the grade", grades + 1)
-        total_grades = my_sum + num_grades
-        average_score = total_grades/ num_grades
-    print()
+    total_grades = 0
+    for i in range(1, num_grades + 1):
+        grades = eval(input("what is the grade for the hw: "))
+        total_grades = total_grades + grades
+        average_score = total_grades / num_grades
+    print(average_score)
 
-
-
+average()
 
 def tip_jar():
     pass
