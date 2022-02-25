@@ -1,6 +1,6 @@
 """
 Name: Kiersten DeCamp
-<ProgramName>.py
+hw6.py
 
 Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
 
