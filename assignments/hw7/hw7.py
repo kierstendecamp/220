@@ -13,13 +13,13 @@ from encryption import encode_better
 
 def number_words(in_file_name, out_file_name):
     open_file = open(in_file_name, 'r')
-    word_value = 0
-    new = open(out_file_name, 'w')
-    for line in open_file:
-        for word in line.split():
-            word_value = word_value + 1
-            new.write(str(word_value) + " " + word + "\n")
-
+    txt = open_file.read()
+    new = open(out_file_name, 'a')
+    splitting = txt.split
+    count = 1
+    for i in splitting():
+        new.write(str(count) + " " + i + "\n")
+        count = count + 1
     open_file.close()
     new.close()
 
@@ -86,4 +86,11 @@ def send_uncrackable_message(file_name, friend_name, pad_file_name):
 
 
 if __name__ == '__main__':
-    pass
+    number_words("pad.txt", "bob.txt")
+    hourly_wages("pad.txt", "bob.txt")
+    calc_check_sum("0-072-94652-0")
+    send_message("pad.txt", "bob")
+    send_safe_message("pad.txt", "mary", 4)
+    send_uncrackable_message("pad.txt", "name", "mary.txt")
+
+
