@@ -18,10 +18,11 @@ def number_words(in_file_name, out_file_name):
     splitting = txt.split
     count = 1
     for i in splitting():
-        new.write(str(count) + " " + i + "\n")
         count = count + 1
+        print(str(count) + " " + i, file=new)
     open_file.close()
     new.close()
+    print(new)
 
 
 def hourly_wages(in_file_name, out_file_name):
@@ -34,10 +35,11 @@ def hourly_wages(in_file_name, out_file_name):
         wage = eval(line_split[2])
         hours = eval(line_split[3])
         pay = (wage * hours) + (1.65 * hours)
-        output_file.write(line_split[0] + " " + line_split[1] + " " + pay)
+        print(line_split[0] + " " + line_split[1] + " " + pay, file=output_file)
 
     input_file.close()
     output_file.close()
+    print(output_file)
 
 
 def calc_check_sum(isbn):
@@ -45,7 +47,7 @@ def calc_check_sum(isbn):
     my_sum = 0
     for i in range(10):
         value = eval(isbn[9-i])
-        my_sum += (i+i) * value
+        my_sum += (i+1) * value
     return my_sum
 
 
@@ -53,10 +55,11 @@ def send_message(file_name, friend_name):
     open_file = open(file_name, "r")
     name = open_file.read()
     new_file = open(friend_name + ".txt", "a")
-    new_file.write(name)
+    print(name.replace("\n", ""), file=new_file)
 
     open_file.close()
     new_file.close()
+    print(friend_name)
 
 
 def send_safe_message(file_name, friend_name, key):
@@ -66,10 +69,11 @@ def send_safe_message(file_name, friend_name, key):
     new = open(friend_name + ".txt", 'a')
     for i in range(len(split_file)):
         e = encode(split_file[i], key)
-        new.write(e + "\n")
+        print(e.replace("\n", ""), file=new)
 
     open_file.close()
     new.close()
+    print(friend_name)
 
 
 def send_uncrackable_message(file_name, friend_name, pad_file_name):
@@ -86,11 +90,4 @@ def send_uncrackable_message(file_name, friend_name, pad_file_name):
 
 
 if __name__ == '__main__':
-    number_words("pad.txt", "bob.txt")
-    hourly_wages("pad.txt", "bob.txt")
-    calc_check_sum("0-072-94652-0")
-    send_message("pad.txt", "bob")
-    send_safe_message("pad.txt", "mary", 4)
-    send_uncrackable_message("pad.txt", "name", "mary.txt")
-
-
+    pass
