@@ -17,5 +17,3 @@ def encode_better(phrase, key_phrase, file_name):
         ret += cipher_text
     file = open(file_name, "a")
     file.write(ret)
-
-
