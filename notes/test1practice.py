@@ -28,5 +28,5 @@
 # for i in range(4):
 #     print("Hello", end="!!!")
 
-for i in range(7, 3, -1):
-    print(i, 2**i)
+for i in range(5):
+    print(i * i)
